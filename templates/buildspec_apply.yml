@@ -24,6 +24,8 @@ phases:
     commands:
       - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}/eks/${env}"
       - "echo ## TERRAFORM APPLY : Starting with the Terraform Apply"
+      - "rm -rf .terraform"
+      - "terraform init"
       - "terraform apply -auto-approve"
 
 artifacts:
