@@ -28,6 +28,7 @@ phases:
       - "rm -rf .terraform"
       - "terraform init"
       - "aws eks update-kubeconfig --region us-east-1 --name ${env}-cluster"
+      - "export KUBE_CONFIG_PATH=~/.kube/config"
       - "terraform plan"
 artifacts:
   files:
