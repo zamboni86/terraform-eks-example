@@ -22,7 +22,7 @@ phases:
       - "rm terraform.zip"
   build:
     commands:
-      - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}/eks/dev"
+      - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}/eks/${env}"
       - "echo ## TERRAFORM APPLY : Starting with the Terraform Apply"
       - "terraform apply -auto-approve"
 
