@@ -26,6 +26,7 @@ phases:
       - "echo ## TERRAFORM PLAN : Generate the Terraform Plan"
       - "aws --version"
       - "rm -rf .terraform"
+      - "aws sts get-caller-identity"
       - "terraform init"
       - "terraform plan"
 artifacts:
