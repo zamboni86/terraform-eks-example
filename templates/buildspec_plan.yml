@@ -25,7 +25,7 @@ phases:
       - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}/eks/dev" #TODO: make this dynamic
       - "echo ## TERRAFORM PLAN : Generate the Terraform Plan"
       - "terraform init"
-      - "terraform plan --auto-approve"
+      - "terraform plan -out tfapply"
 artifacts:
   files:
     - '**/*'
